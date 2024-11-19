@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  font-family: "Roboto Mono";
+  letter-spacing: 0.08rem;
+  background-color: rgb(24,3,23);
+  color: white;
+} 
+
+.bg-image{
+  background-image: url("assets/bg.webp");
+}
