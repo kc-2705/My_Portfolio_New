@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kc-2705.github.io/My_Portfolio_New/",
+  "homepage": "https://kc-2705.github.io/My_Portfolio_New",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
