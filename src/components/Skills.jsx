@@ -31,7 +31,7 @@ const Skills = () => {
         <section className='py-16' id='skills' ref={skillsRef}>
             <div className='px-4'>
                 <h2 className='mb-8 text-center text-3xl font-medium lg:text-4xl'>Skills</h2>
-                <div className='grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4'>
+                <div className='grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7'>
                     {SKILLS.map((skill, index) => (
                         <div key={index} className='skill-item flex flex-col items-center text-center'>
                             <div 

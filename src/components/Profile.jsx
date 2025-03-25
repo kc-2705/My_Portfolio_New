@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import resume from '../assets/Kavya_Resume.pdf';
 import { PROFILE } from '../constants';
 import { RiArrowRightUpLine } from '@remixicon/react';
 import kavya from '../assets/kavya.jpg';
@@ -79,7 +80,7 @@ const Profile = () => {
         {PROFILE.subheading}
       </p>
       <a
-        href="/Kavya-Immanni.pdf"
+        href={resume}
         target="_blank"
         rel="noopener noreferrer"
         download
