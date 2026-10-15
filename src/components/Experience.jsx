@@ -45,6 +45,7 @@ const Experience = () => {
                     {exp.role}, {exp.company}
                   </span>
                 </h3>
+                {exp.location && <p className="mb-3 text-sm text-stone-400">{exp.location}</p>}
 
                 <ul className="mb-4 list-disc pl-5 text-sm lg:text-base">
                   {exp.description.map((point, id) => (

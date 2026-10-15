@@ -4,16 +4,19 @@ import projectOrderDesk from "../assets/project-orderdesk.png";
 import projectFun from "../assets/project-fun.png";
 import project2 from "../assets/handcricket.webp";
 import project4 from "../assets/smarthome.jfif";
-import { 
-  RiHtml5Line, RiCss3Line, RiJavascriptLine, RiReactjsLine, RiCodeSSlashLine, RiNodeTree, 
-  RiDatabaseLine, RiGitBranchLine, RiAmazonLine, RiTerminalBoxLine, RiShieldUserLine, 
-  RiLockPasswordLine, RiToolsLine, RiServerLine 
-} from "react-icons/ri";
-
-import { 
-  FaBootstrap, FaJava, FaPython, FaGitAlt, FaGithub, FaAws, FaDocker, FaJenkins, FaJira, 
-  FaNetworkWired 
-} from "react-icons/fa";
+import {
+  SiTypescript, SiJavascript, SiHtml5, SiCss3, SiReact, SiTailwindcss, SiAntdesign, SiJquery,
+  SiNodedotjs, SiExpress, SiSpringboot, SiPostman, SiJsonwebtokens, SiMysql, SiPostgresql,
+  SiMongodb, SiRedis, SiAmazonec2, SiAmazons3, SiDocker, SiLinux, SiJest, SiJunit5, SiGit,
+  SiGithub, SiGitlab, SiJira, SiConfluence, SiOracle, SiGoogleanalytics, SiGoogletagmanager,
+  SiGooglesearchconsole, SiGithubcopilot,
+} from "react-icons/si";
+import { FaJava, FaAws } from "react-icons/fa";
+import { VscAzure } from "react-icons/vsc";
+import {
+  TbApi, TbShieldLock, TbDatabaseCog, TbTestPipe, TbRocket, TbUsersGroup, TbFileText,
+  TbChartBar, TbDeviceMobile, TbSql, TbBolt,
+} from "react-icons/tb";
 
 export const NAVIGATION_LINKS = [
   { label: "Projects", href: "#projects" },
@@ -25,9 +28,9 @@ export const NAVIGATION_LINKS = [
 
 export const PROFILE = {
   name: "Kavya Chowdary Immanni",
-  role: "Software Developer / Frontend Developer / Java Developer / Full-Stack Developer",
+  role: "Full-Stack Software Developer · React · Node.js · Java",
   subheading:
-    "Skilled front-end developer and software engineer with expertise in building dynamic, responsive web applications using React.js, JavaScript, HTML5, CSS3, and in developing robust back-end solutions with Java, Spring boot and Nodejs."
+    "Full-stack developer with 5 years of experience building web applications, REST APIs and business systems with TypeScript, React, Node.js/Express, Java/Spring Boot and SQL/NoSQL databases, from requirements and design through testing, deployment and production support.",
 };
 
 export const PROJECTS = [
@@ -88,103 +91,160 @@ export const PROJECTS = [
   },
 ];
 
-export const SKILLS = [
-  { name: "HTML5", icon: <RiHtml5Line className="text-orange-600" /> },
-  { name: "CSS3", icon: <RiCss3Line className="text-blue-500" /> },
-  { name: "Tailwind CSS", icon: <RiCodeSSlashLine className="text-teal-400" /> },
-  { name: "Bootstrap", icon: <FaBootstrap className="text-purple-500" /> },
-  { name: "JavaScript (ES6+)", icon: <RiJavascriptLine className="text-yellow-500" /> },
-  { name: "React.js", icon: <RiReactjsLine className="text-blue-400" /> },
-  { name: "TypeScript", icon: <RiCodeSSlashLine className="text-blue-600" /> },
-  { name: "Next.js", icon: <RiReactjsLine className="text-blue-900" /> },
-  { name: "Node.js", icon: <RiNodeTree className="text-green-500" /> },
-  { name: "Express.js", icon: <RiServerLine className="text-green-700" /> },
-  { name: "Java", icon: <FaJava className="text-red-600" /> },
-  { name: "Spring Boot", icon: <RiServerLine className="text-green-700" /> },
-  { name: "Python", icon: <FaPython className="text-blue-400" /> },
-  { name: "SQL", icon: <RiDatabaseLine className="text-blue-600" /> },
-  { name: "MySQL", icon: <RiDatabaseLine className="text-blue-500" /> },
-  { name: "PostgreSQL", icon: <RiDatabaseLine className="text-blue-800" /> },
-  { name: "MongoDB", icon: <RiDatabaseLine className="text-green-600" /> },
-  { name: "REST APIs", icon: <RiServerLine className="text-orange-800" /> },
-  { name: "Postman", icon: <RiToolsLine className="text-orange-500" /> },
-  { name: "Git", icon: <FaGitAlt className="text-red-600" /> },
-  { name: "GitHub", icon: <FaGithub className="text-green" /> },
-  { name: "AWS", icon: <FaAws className="text-yellow-500" /> },
-  { name: "Jenkins", icon: <FaJenkins className="text-red-600" /> },
-  { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
-  { name: "Kubernetes", icon: <FaNetworkWired className="text-blue-600" /> },
-  { name: "Microservices Architecture", icon: <RiServerLine className="text-blue-700" /> },
-  { name: "OAuth", icon: <RiShieldUserLine className="text-teal-500" /> },
-  { name: "JWT", icon: <RiLockPasswordLine className="text-yellow-500" /> },
-  { name: "Agile", icon: <RiToolsLine className="text-orange-700" /> },
-  { name: "Scrum", icon: <RiToolsLine className="text-orange-700" /> },
-  { name: "Kanban", icon: <RiToolsLine className="text-orange-700" /> },
-  { name: "Jira", icon: <FaJira className="text-blue-600" /> },
+export const SKILL_GROUPS = [
+  {
+    title: "Languages",
+    skills: [
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+      { name: "JavaScript (ES6+)", icon: <SiJavascript className="text-yellow-400" /> },
+      { name: "Java", icon: <FaJava className="text-red-500" /> },
+      { name: "SQL", icon: <TbSql className="text-sky-300" /> },
+      { name: "HTML5", icon: <SiHtml5 className="text-orange-500" /> },
+      { name: "CSS3", icon: <SiCss3 className="text-blue-400" /> },
+    ],
+  },
+  {
+    title: "Frontend",
+    skills: [
+      { name: "React.js", icon: <SiReact className="text-cyan-400" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
+      { name: "Ant Design", icon: <SiAntdesign className="text-blue-500" /> },
+      { name: "jQuery / AJAX", icon: <SiJquery className="text-blue-300" /> },
+      { name: "Responsive Design", icon: <TbDeviceMobile className="text-pink-300" /> },
+    ],
+  },
+  {
+    title: "Backend & APIs",
+    skills: [
+      { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
+      { name: "Express.js", icon: <SiExpress className="text-stone-200" /> },
+      { name: "Spring Boot", icon: <SiSpringboot className="text-green-500" /> },
+      { name: "REST API Design", icon: <TbApi className="text-orange-300" /> },
+      { name: "JWT Auth", icon: <SiJsonwebtokens className="text-pink-400" /> },
+      { name: "RBAC", icon: <TbShieldLock className="text-teal-300" /> },
+      { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+    ],
+  },
+  {
+    title: "Databases & Performance",
+    skills: [
+      { name: "MySQL", icon: <SiMysql className="text-sky-400" /> },
+      { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
+      { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+      { name: "Redis", icon: <SiRedis className="text-red-500" /> },
+      { name: "Schema Design & Indexing", icon: <TbDatabaseCog className="text-purple-300" /> },
+      { name: "Query Optimization", icon: <TbBolt className="text-yellow-300" /> },
+    ],
+  },
+  {
+    title: "Cloud & Infrastructure",
+    skills: [
+      { name: "AWS", icon: <FaAws className="text-orange-400" /> },
+      { name: "EC2", icon: <SiAmazonec2 className="text-orange-400" /> },
+      { name: "S3", icon: <SiAmazons3 className="text-red-400" /> },
+      { name: "Azure Blob Storage", icon: <VscAzure className="text-sky-400" /> },
+      { name: "Docker", icon: <SiDocker className="text-sky-500" /> },
+      { name: "Linux", icon: <SiLinux className="text-yellow-200" /> },
+    ],
+  },
+  {
+    title: "Testing & DevOps",
+    skills: [
+      { name: "Jest", icon: <SiJest className="text-red-400" /> },
+      { name: "JUnit", icon: <SiJunit5 className="text-green-400" /> },
+      { name: "API & Integration Testing", icon: <TbTestPipe className="text-lime-300" /> },
+      { name: "CI/CD", icon: <TbRocket className="text-pink-300" /> },
+      { name: "Git", icon: <SiGit className="text-orange-500" /> },
+      { name: "GitHub", icon: <SiGithub className="text-stone-100" /> },
+      { name: "GitLab", icon: <SiGitlab className="text-orange-400" /> },
+    ],
+  },
+  {
+    title: "Collaboration",
+    skills: [
+      { name: "Jira", icon: <SiJira className="text-blue-400" /> },
+      { name: "Confluence", icon: <SiConfluence className="text-blue-300" /> },
+      { name: "Agile / Scrum", icon: <TbUsersGroup className="text-purple-300" /> },
+      { name: "Technical Docs", icon: <TbFileText className="text-stone-200" /> },
+    ],
+  },
+  {
+    title: "Enterprise, Analytics & AI Tools",
+    skills: [
+      { name: "NetSuite & SuiteScript 2.x", icon: <SiOracle className="text-red-500" /> },
+      { name: "SuiteAnalytics & Saved Searches", icon: <TbChartBar className="text-red-300" /> },
+      { name: "Google Analytics 4", icon: <SiGoogleanalytics className="text-amber-400" /> },
+      { name: "Google Tag Manager", icon: <SiGoogletagmanager className="text-blue-400" /> },
+      { name: "Search Console", icon: <SiGooglesearchconsole className="text-sky-300" /> },
+      { name: "GitHub Copilot", icon: <SiGithubcopilot className="text-stone-100" /> },
+    ],
+  },
 ];
 
 export const EXPERIENCES = [
   {
-    yearRange: "Apr 2024 - Nov 2024",
-    role: "Software Engineer",
-    company: "Capital One",
+    yearRange: "Feb 2026 - Present",
+    role: "Application Developer",
+    company: "DSHB (Developmental Studies Hybridoma Bank)",
+    location: "Iowa City, IA",
     description: [
-      "Designed and developed microservices-based backend applications using Java (Spring Boot), Hibernate, and RESTful APIs, enabling seamless financial transactions for banking clients and efficient order processing for ecommerce platforms.",
-      "Optimized database queries & implemented strategies in PostgreSQL & MongoDB, improving query time by 20%, ensuring faster payment processing in banking applications & real-time inventory updates in e-commerce.",
-      "Integrated secure authentication and authorization mechanisms using OAuth2, JWT, and Spring Security, enhancing fraud prevention in banking transactions and securing user data for e-commerce platforms.",
-      "Enhanced API performance by implementing caching mechanisms & asynchronous processing using Java Concurrency, reducing response times by 30% for loan approvals in banking and checkout flows in e-commerce.", 
-      "Developed event-driven architecture using Kafka and RabbitMQ, enabling real-time transaction monitoring for banking firms and improving order tracking systems for e-commerce clients." ,
-      "Collaborated with DevOps teams to automate CI/CD pipelines using Jenkins, Docker, & Kubernetes, reducing deployment time by 40%, ensuring high availability for banking & smooth seasonal scaling for e-commerce traffic.",
+      "Design and build internal and external web applications with TypeScript, React, Node.js/Express and MySQL, taking features from requirements and database design through testing, deployment and production support.",
+      "Developed the DSHB Depositor Portal (TypeScript/React frontend, layered Node.js/Express REST API, MySQL), letting external researchers submit antibody and hybridoma deposits and track review status online.",
+      "Designed REST endpoints with JWT authentication and role-based access control, using Express middleware to scope researchers to their own records while authorized staff manage broader datasets.",
+      "Normalized researcher, institution, antibody/antigen and review data into related MySQL tables with foreign keys and indexes, and added connection pooling to keep search and status pages responsive.",
+      "Built internal React/TypeScript tools that turned manual, spreadsheet-based processes into web forms, dashboards and data-management workflows for staff.",
+      "Developed NetSuite integrations with SuiteScript, jQuery, AJAX and RESTlets, and a React blog interface that reads NetSuite records so non-technical staff can publish website content without code changes.",
+      "Administer NetSuite users, roles, permissions, custom fields, forms, saved searches and scheduled reports supporting orders, deposits and fulfillment.",
+      "Deployed a self-hosted NocoDB environment with Docker, giving staff a filterable interface to operational data without ad hoc developer queries.",
     ],
-    techStack: ["Javascript ES6", "React.js", "RESTful APIs", "Jira", "Java (Spring boot)", "Hibernate", "PostgreSQL", "MongoDB", "Query Optimization", "OAuth2, JWT", "Caching Mechanisms", "Asynchronous Processing", "CI/CD Pipelines", "Docker & Kubernetes"],
+    techStack: ["TypeScript", "React", "Node.js", "Express", "MySQL", "JWT & RBAC", "NetSuite", "SuiteScript", "Docker"],
   },
   {
-    yearRange: "Jan 2022 - Dec 2022",
-    role: "Software Engineer",
-    company: "Cloud Software Group",
+    yearRange: "Aug 2023 - Jan 2026",
+    role: "Application Developer",
+    company: "Optum Rx",
+    location: "Remote",
     description: [
-      "Developed highly responsive web applications using React.js, JavaScript (ES6), HTML5, CSS3, and Material UI, ensuring cross-browser compatibility and optimal user experience.",
-      "Designed and implemented reusable, modular UI components, improving code maintainability and reducing development time by 40% for dynamic content-driven applications.", 
-      "Integrated RESTful APIs with frontend components, optimizing data fetching and state management using React Query and Redux, leading to a 25% improvement in page load speed.", 
-      "Developed and optimized server-side components in Java (Spring Boot) for backend integration, enhancing system scalability and reducing API response time by 30%.", 
-      "Enhanced localization support by implementing an automated i18n framework, reducing translation deployment time from 3-4 weeks to 4-5 days, improving global accessibility.",
-      "Implemented unit and integration testing using Jest, React Testing Library, and JUnit, ensuring high code coverage and minimizing production defects by 50%.", 
-      "Utilized JIRA and Agile methodologies for sprint planning, issue tracking, and feature prioritization, accelerating development cycles and ensuring on-time project delivery. ",
+      "Developed and supported full-stack healthcare applications with React, Tailwind CSS, Ant Design, Node.js/Express, MongoDB and Redis, giving pharmacy fulfillment teams one view of medication inventory, prescription dispatches, shipments and home-delivery status.",
+      "Built REST APIs for medication intake, inventory updates, prescription dispatch, shipment tracking and delivery status, with request validation, authentication, authorization and consistent error handling.",
+      "Followed HIPAA-focused data handling and access-control practices, limiting access by user responsibility and minimizing exposure of sensitive information.",
+      "Designed MongoDB collections for medications, inventory transactions, dispatch orders and delivery history, with compound indexes on frequently filtered fields.",
+      "Added Redis caching for frequently requested inventory and dispatch metrics, with explicit cache invalidation after updates to keep dashboards current.",
+      "Containerized Node.js services and MongoDB/Redis with Docker and supported deployments on AWS (EC2, S3, CloudWatch, IAM) through CI/CD pipelines across dev, test and production.",
+      "Investigated production issues by tracing requests across React, Node.js, MongoDB and Redis using application and CloudWatch logs, then shipped verified fixes with automated API tests to prevent regressions.",
     ],
-    techStack: ["React.js (JavaScript ES6)", "HTML5, CSS3, Material UI (UI Design & Styling)", "React Query, Redux (State Management)", "Jest, JUnit, React Testing Library (Unit & Integration Testing)", "Java (Spring Boot) ", "RESTful APIs (API Development & Integration),", "JIRA", "Agile Methodologies(Scrum/Kanban)"],
+    techStack: ["React", "Tailwind CSS", "Ant Design", "Node.js", "Express", "MongoDB", "Redis", "Docker", "AWS", "CI/CD"],
   },
   {
-    yearRange: "Aug 2021 - Dec 2021",
-    role: "Associate Software Engineer",
-    company: "NPCI",
+    yearRange: "Aug 2021 - Nov 2022",
+    role: "Associate Globalization Developer",
+    company: "TIBCO Software (now Cloud Software Group)",
+    location: "Hyderabad, India",
     description: [
-      "Developed and optimized dynamic SQL queries using Java JDBC, enhancing database interaction efficiency and reducing query execution time by 15%, ensuring faster transaction processing for banking clients.",
-      "Built and maintained responsive UI dashboards and data entry forms using React.js, JavaScript (ES6), HTML5, CSS3, and Java, streamlining internal workflows and improving data entry efficiency by 30%." ,
-      " Integrated email notifications using Java and Spring Boot, automating transactional alerts for banking clients, reducing manual intervention and improving customer engagement.",
-      "Collaborated with UX teams to improve UI/UX of internal banking applications, ensuring accessibility and seamless navigation, leading to a 20% reduction in user-reported issues.",
-      "Designed and implemented a real-time fraud detection dashboard for an E-commerce client, leveraging Java and React.js, reducing fraudulent transactions by 25% through enhanced visibility and monitoring.",
-      "Resolved high-priority performance issues for a banking client’s loan processing system, optimizing Java-based backend services and reducing API response time by 35%, ensuring faster loan approvals.",
-      "Enhanced checkout flow for a leading E-commerce platform by optimizing frontend state management & integrating secure payment APIs, reducing checkout errors by 40% & boosting successful transactions.", 
-      "Led the migration of legacy JSP pages to React.js, modernizing UI components for banking portals and improving page load times by 50%, ensuring a smoother customer experience.",
+      "Developed backend services in Java and Spring Boot for MOLEE, an internal translation-management platform, with separate service, business and data-access layers.",
+      "Designed and maintained REST APIs connecting the platform with internal build systems and external translation vendors, handling JSON/XML payloads, validation, errors and job status updates.",
+      "Built Java processing components for XLIFF, .properties and JSON files that validated structure, required keys and character encoding before files moved downstream.",
+      "Used Spring Data JPA and SQL to track translation records and project/language status, and improved processing performance by consolidating queries and removing repeated work.",
+      "Developed and tested services in AWS (EC2, S3, CloudWatch), containerized them with Docker, and supported CI/CD builds through development and staging.",
+      "Wrote unit and integration tests for Spring Boot services and APIs, and worked with QA to reproduce and fix localization, encoding, date/number formatting and UI text defects.",
     ],
-    techStack: ["React.js", "JavaScript (ES6+)", "HTML5 & CSS3", "Java (JDBC, Spring Boot)", "SQL (Dynamic SQL Queries, Query Optimization) ", "API Optimization (Java-based Backend Services)", "PostgreSQL, MySQL", "REST APIs", "OAuth & JWT", "AWS", "Docker & Kubernetes"],
+    techStack: ["Java", "Spring Boot", "Spring Data JPA", "REST APIs", "SQL", "AWS", "Docker", "JUnit", "Agile"],
   },
 ];
-
 
 export const EDUCATION = [
   {
     id: 1,
-    degree: "Bachelor of Science in Computer Science",
-    institution: "GRIET, India",
+    degree: "B.Tech in Computer Science",
+    institution: "Gokaraju Rangaraju Institute of Engineering & Technology, Hyderabad, India",
     duration: "2017 - 2021",
     cgpa: 3.7,
     courses: "COURSES: Linear Algebra, Advanced Calculus, Probability and statistics, DBMS, Advanced Data Structures, Operating Systems, Object oriented programming through Java, Web Technologies, Cloud Computing, Data warehousing and Data mining, Unified Modeling Language ", 
   },
   {
     id: 2,
-    degree: "Master of Science in Computer Science",
-    institution: "Saint Louis University, MO",
+    degree: "M.S. in Computer Science",
+    institution: "Saint Louis University, St. Louis, Missouri",
     duration: "2023 - 2024",
     cgpa: 3.86,
     courses:

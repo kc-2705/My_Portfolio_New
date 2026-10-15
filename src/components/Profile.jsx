@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import resume from '../assets/Kavya_Resume.pdf';
+import resume from '../assets/Kavya_Immanni_Resume.pdf';
 import { PROFILE } from '../constants';
 import { RiArrowRightUpLine } from '@remixicon/react';
 import kavya from '../assets/kavya.jpg';
