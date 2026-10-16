@@ -84,8 +84,8 @@ export const PROJECTS = [
     id: 6,
     title: "Fun Web Projects",
     description:
-      "A collection of creative front-end experiments: a three.js 3D endless runner, an interactive day-and-night flower garden, a five-game pocket arcade, and small animation pieces built with plain HTML, CSS and JavaScript.",
-    techStack: ["JavaScript", "three.js", "Canvas", "CSS Animations"],
+      "A collection of creative front-end experiments: an interactive day-and-night flower garden, a five-game pocket arcade, a lamp-themed login, and small animation pieces built with plain HTML, CSS and JavaScript.",
+    techStack: ["JavaScript", "SVG", "Canvas", "CSS Animations"],
     imgSrc: projectFun,
     link: "https://github.com/kc-2705/fun-web-programming",
   },
