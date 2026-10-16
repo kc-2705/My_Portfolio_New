@@ -34,15 +34,15 @@ const Contact = () => {
         <p className="mb-4 text-lg lg:text-xl">
           Feel free to reach out to me via email:{" "}
           <a
-            href="mailto:i.kavyachowdary@gmail.com"
+            href="mailto:ikavyach@gmail.com"
             className="border-b"
           >
-            i.kavyachowdary@gmail.com
+            ikavyach@gmail.com
           </a>
         </p>
         <div className="mt-8 flex justify-center space-x-6">
           <a
-            href="https://www.linkedin.com/in/kavya-chowdary-immanni-b094030a/"
+            href="https://www.linkedin.com/in/kavya-immanni/"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-item"
