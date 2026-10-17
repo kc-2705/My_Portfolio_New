@@ -1,6 +1,6 @@
 import projectPlayverse from "../assets/project-playverse.jpg";
 import projectExpenso from "../assets/project-expenso.png";
-import projectAskPastMe from "../assets/project-askpastme.png";
+import projectAskPastMe from "../assets/project-askpastme.jpg";
 import projectOrderDesk from "../assets/project-orderdesk.png";
 import projectFun from "../assets/project-fun.png";
 import project2 from "../assets/handcricket.webp";
@@ -77,7 +77,6 @@ export const PROJECTS = [
       "Android voice journal built with React Native. Record your day, then search past notes or replay what you said on the same day in past years. Works fully offline with SQLite full-text search, reminders and fingerprint lock.",
     techStack: ["React Native", "Expo", "TypeScript", "SQLite"],
     imgSrc: projectAskPastMe,
-    imgContain: true,
     link: "https://github.com/kc-2705/ask-past-me",
   },
   {
