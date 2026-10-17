@@ -2,23 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Clean, calm theme: soft teal-to-peach gradient, modern sans-serif. */
+/* Light & clean theme: white surfaces, dark navy text, indigo accent. */
 :root {
   font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
   letter-spacing: 0.01em;
-  background-color: #2c5f6d;
-  color: #ffffff;
+  background-color: #f7f8fa;
+  color: #1e293b;
 }
-
-.bg-image {
-  background: linear-gradient(165deg, #23505d 0%, #2f6a78 35%, #4f7f86 62%, #a7837a 100%);
-}
-
-/* Frosted, softly rounded cards for projects, skills, experience and education. */
-.rounded-xl, .rounded-2xl, .rounded-3xl {
-  background-color: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(6px);
-}
-
-h1, h2, h3 { letter-spacing: -0.01em; }
+.bg-image { background: #f7f8fa; }
+.rounded-xl, .rounded-2xl { background-color: #ffffff; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05); }
+h1, h2, h3 { letter-spacing: -0.01em; color: #0f172a; }
 p, li { line-height: 1.65; }
+.type-caret { border-right: 2px solid #4f46e5; padding-right: 2px; animation: caret 1s step-end infinite; }
+@keyframes caret { 50% { border-color: transparent; } }
+.status-dot { width: 9px; height: 9px; border-radius: 9999px; background: #10b981; animation: pulse-dot 1.8s infinite; }
+@keyframes pulse-dot { 0% { box-shadow: 0 0 0 0 rgba(16,185,129,.55); } 70% { box-shadow: 0 0 0 9px rgba(16,185,129,0); } 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); } }
+@media (prefers-reduced-motion: reduce) { .type-caret, .status-dot { animation: none; } }

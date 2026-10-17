@@ -32,7 +32,7 @@ return ()=> ctx.revert()
             <h2 className='mb-8 text-center text-3xl font-medium lg:text-4xl'>Education</h2>
             <div className='flex flex-col space-y-8'>
                 {EDUCATION.map((edu)=> (
-                    <div key={edu.id} className='education-item rounded-xl border border-white/20 p-6'>
+                    <div key={edu.id} className='education-item rounded-xl border border-slate-200 p-6'>
                         <h3 className='mb-2 text-lg lg:text-2xl'>{edu.degree}</h3>
                         <h4 className='text-lg font-medium lg:text-xl'>{edu.institution}</h4>
                         <p className='text-sm lg:text-base'>{edu.duration}</p>

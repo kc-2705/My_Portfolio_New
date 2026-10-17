@@ -31,6 +31,8 @@ export const NAVIGATION_LINKS = [
 export const PROFILE = {
   name: "Kavya Chowdary Immanni",
   role: "Full-Stack Software Developer · React · Node.js · Java",
+  roles: ["Full-Stack Developer", "Frontend Developer", "Java Developer", "Integration Developer"],
+  status: "Open to roles · Iowa, USA · Remote OK",
   subheading:
     "I build web applications end to end: React/TypeScript interfaces, Node.js and Java/Spring Boot APIs, SQL and NoSQL databases, integrations and cloud deployments, with clean, tested code and a focus on the people who use them.",
   highlights: [
@@ -49,6 +51,7 @@ export const PROJECTS = [
   {
     id: 1,
     title: "Playverse – 3D Game Hub",
+    category: "Full-stack",
     description:
       "Full-stack game platform with 4 realistic 3D games, accounts, leaderboards and real-time online multiplayer. Includes enemy AI (vision cones, A* path finding), procedural worlds, a server-authoritative Socket.io game server, 11 automated tests, and an installable PWA and Android app.",
     techStack: ["React", "TypeScript", "Babylon.js", "Node.js", "Express", "Socket.io", "MongoDB", "PWA"],
@@ -59,6 +62,7 @@ export const PROJECTS = [
   {
     id: 2,
     title: "Expenso – Personal Finance Tracker",
+    category: "Full-stack",
     description:
       "MERN app to track income and expenses, set monthly budgets, automate recurring payments and import bank CSVs, with charts, CSV/PDF export, dark mode and a secure API (JWT, bcrypt, Zod validation, rate limiting) backed by automated tests.",
     techStack: ["React", "Node.js", "Express", "MongoDB", "Ant Design", "React Query", "JWT"],
@@ -68,6 +72,7 @@ export const PROJECTS = [
   {
     id: 3,
     title: "Ask Past Me – Voice Journal App",
+    category: "Mobile",
     description:
       "Android voice journal built with React Native. Record your day, then search past notes or replay what you said on the same day in past years. Works fully offline with SQLite full-text search, reminders and fingerprint lock.",
     techStack: ["React Native", "Expo", "TypeScript", "SQLite"],
@@ -78,6 +83,7 @@ export const PROJECTS = [
   {
     id: 4,
     title: "OrderDesk – Order Management Dashboard",
+    category: "Frontend",
     description:
       "React dashboard to create, filter and review customer orders, with validated order forms and line items, status and date filters, sorting, order history, KPI cards and a collapsible sidebar layout.",
     techStack: ["React", "Vite", "React Router", "Ant Design"],
@@ -88,6 +94,7 @@ export const PROJECTS = [
   {
     id: 5,
     title: "Fun Web Projects",
+    category: "Frontend",
     description:
       "Creative front-end experiments: an interactive day-and-night flower garden, a five-game pocket arcade, a lamp-themed login and small animation pieces built with plain HTML, CSS and JavaScript.",
     techStack: ["JavaScript", "SVG", "Canvas", "CSS Animations"],
@@ -98,6 +105,7 @@ export const PROJECTS = [
   {
     id: 6,
     title: "Multiplayer Hand Cricket Game with Chat",
+    category: "Games",
     description:
       "Multiplayer hand cricket game in Python using Pygame for graphics and socket programming for networking, with a server managing game sessions, player moves, scores and chat.",
     techStack: ["Python", "Pygame", "Sockets"],
@@ -107,6 +115,7 @@ export const PROJECTS = [
   {
     id: 7,
     title: "Smart Home Monitoring (GSHAM Dataset)",
+    category: "Data",
     description:
       "Energy-usage prediction with Decision Tree, Random Forest and LSTM models: EDA, Min-Max scaling, MAE/MSE evaluation and Tableau dashboards to present the insights.",
     techStack: ["Python", "Regression Models", "LSTM", "Tableau"],

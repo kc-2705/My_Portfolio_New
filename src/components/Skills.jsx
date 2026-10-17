@@ -35,15 +35,15 @@ const Skills = () => {
                     {SKILL_GROUPS.map((group) => (
                         <div
                             key={group.title}
-                            className='skill-group rounded-xl border border-white/20 bg-white/5 p-5'
+                            className='skill-group rounded-xl border border-slate-200 bg-white p-5'
                         >
-                            <h3 className='mb-4 bg-gradient-to-b from-[#f7ddd0] to-[#f2c9b4] bg-clip-text text-lg font-semibold text-transparent'>
+                            <h3 className='mb-4 bg-gradient-to-b from-indigo-700 to-indigo-500 bg-clip-text text-lg font-semibold text-transparent'>
                                 {group.title}
                             </h3>
                             <ul className='space-y-3'>
                                 {group.skills.map((skill) => (
                                     <li key={skill.name} className='flex items-center gap-3'>
-                                        <span className='flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-black/30 text-xl'>
+                                        <span className='flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-xl'>
                                             {skill.icon}
                                         </span>
                                         <span className='text-sm lg:text-base'>{skill.name}</span>

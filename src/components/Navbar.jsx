@@ -29,7 +29,7 @@ const Navbar = () => {
         <div>
             <nav className="fixed left-0 right-0 z-50 lg:top-4">
                 {/* Desktop Menu */}
-                <div className="mx-auto hidden max-w-6xl items-center justify-between py-4 px-6 rounded-full border border-white/30 backdrop-blur-lg lg:flex">
+                <div className="mx-auto hidden max-w-6xl items-center justify-between py-4 px-6 rounded-full border border-slate-200 bg-white/90 shadow-sm backdrop-blur-lg lg:flex">
                     <div className="flex items-center gap-12">
                         <div className="mr-6">
                             <a href="#">
@@ -41,7 +41,7 @@ const Navbar = () => {
                         {NAVIGATION_LINKS.map((item, index) => (
                             <li key={index}>
                                 <a
-                                    className="text-xl font-medium hover:text-stone-300"
+                                    className="text-xl font-medium hover:text-slate-500"
                                     href={item.href}
                                     onClick={(e) => handleLinkClick(e, item.href)}
                                 >
@@ -53,7 +53,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu */}
-                <div className="py-3 px-6 backdrop-blur-md lg:hidden">
+                <div className="py-3 px-6 bg-white/90 shadow-sm backdrop-blur-md lg:hidden">
                     <div className="flex items-center justify-between">
                         <div>
                             <a href="#">
