@@ -67,12 +67,12 @@ const Profile = () => {
 
   return (
     <section
-      className="flex min-h-screen flex-col items-center justify-center gap-4 lg:gap-6 mt-2 font-roboto-mono"
+      className="flex min-h-screen flex-col items-center justify-center gap-4 lg:gap-6 mt-2 "
       ref={profileRef}
     >
       <div className="mt-24 px-2 text-center lg:mt-20">
         <h1 className="hero-title text-3xl uppercase sm:text-4xl lg:text-6xl">{PROFILE.name}</h1>
-        <h2 className="hero-subheading bg-gradient-to-b from-pink-200 to-purple-300 bg-clip-text text-center text-2xl tracking-tighter text-transparent sm:text-3xl">
+        <h2 className="hero-subheading bg-gradient-to-b from-white to-[#f2c9b4] bg-clip-text text-center text-2xl tracking-tighter text-transparent sm:text-3xl">
           {PROFILE.role}
         </h2>
       </div>
@@ -81,8 +81,8 @@ const Profile = () => {
       </p>
       <ul className="hero-text grid max-w-3xl grid-cols-2 gap-3 px-4 sm:grid-cols-4">
         {PROFILE.highlights.map((h) => (
-          <li key={h.label} className="rounded-2xl border border-pink-200/20 bg-white/5 px-3 py-3 text-center backdrop-blur-sm">
-            <span className="block text-2xl font-semibold text-pink-200 lg:text-3xl">{h.value}</span>
+          <li key={h.label} className="rounded-2xl border border-white/20 bg-white/5 px-3 py-3 text-center backdrop-blur-sm">
+            <span className="block text-2xl font-semibold text-[#ffd9c7] lg:text-3xl">{h.value}</span>
             <span className="text-sm text-stone-300">{h.label}</span>
           </li>
         ))}
@@ -93,17 +93,17 @@ const Profile = () => {
         target="_blank"
         rel="noopener noreferrer"
         download
-        className="hero-btn mb-6 flex gap-1 rounded-full border border-pink-200/50 px-3 py-2 tracking-tighter lg:text-xl 
-                   hover:bg-stone-300 hover:text-white hover:border-pink-400
+        className="hero-btn mb-6 flex gap-1 rounded-full bg-[#f2c9b4] px-5 py-2 font-semibold text-stone-900 lg:text-lg 
+                   hover:bg-[#f2c9b4] hover:text-stone-900 hover:border-[#f2c9b4]
                    active:bg-stone-500 active:border-stone-600 active:text-white transition-colors"
       >
         <span>Download Resume</span>
         <RiArrowRightUpLine />
       </a>
-      <a href={PROFILE.links.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="mb-6 rounded-full border border-pink-200/50 p-2 hover:border-pink-400">
+      <a href={PROFILE.links.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="mb-6 rounded-full border border-white/50 p-2 hover:border-[#f2c9b4]">
         <RiGithubFill />
       </a>
-      <a href={PROFILE.links.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="mb-6 rounded-full border border-pink-200/50 p-2 hover:border-pink-400">
+      <a href={PROFILE.links.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="mb-6 rounded-full border border-white/50 p-2 hover:border-[#f2c9b4]">
         <RiLinkedinBoxFill />
       </a>
       </div>

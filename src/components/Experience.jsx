@@ -41,7 +41,7 @@ const Experience = () => {
               </div>
               <div className="w-full md:w-3/4">
                 <h3 className="mb-2 text-lg lg:text-2xl">
-                  <span className="bg-gradient-to-b from-purple-400 to-pink-200 bg-clip-text text-transparent font-semibold">
+                  <span className="bg-gradient-to-b from-[#e8b9a3] to-[#f2c9b4] bg-clip-text text-transparent font-semibold">
                     {exp.role}, {exp.company}
                   </span>
                 </h3>
@@ -56,7 +56,7 @@ const Experience = () => {
                   {exp.techStack.map((tech, id) => (
                     <span
                       key={id}
-                      className="rounded-full border-2 border-pink-500/30 px-3 py-1 text-sm font-semibold"
+                      className="rounded-full border-2 border-white/30 px-3 py-1 text-sm font-semibold"
                     >
                       {tech}
                     </span>

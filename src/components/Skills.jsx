@@ -35,9 +35,9 @@ const Skills = () => {
                     {SKILL_GROUPS.map((group) => (
                         <div
                             key={group.title}
-                            className='skill-group rounded-xl border border-purple-300/20 bg-white/5 p-5'
+                            className='skill-group rounded-xl border border-white/20 bg-white/5 p-5'
                         >
-                            <h3 className='mb-4 bg-gradient-to-b from-purple-300 to-pink-200 bg-clip-text text-lg font-semibold text-transparent'>
+                            <h3 className='mb-4 bg-gradient-to-b from-[#f7ddd0] to-[#f2c9b4] bg-clip-text text-lg font-semibold text-transparent'>
                                 {group.title}
                             </h3>
                             <ul className='space-y-3'>

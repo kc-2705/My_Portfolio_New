@@ -34,13 +34,13 @@ const Projects = () => {
                     {PROJECTS.map((project) => {
                         return (
                             <div key={project.id} className='flex w-full flex-col p-4 md:w-1/2 lg:w-1/3'>
-                                <div className=' flex-grow overflow-hidden rounded-xl border border-purple-300/20'>
+                                <div className=' flex-grow overflow-hidden rounded-xl border border-white/20'>
                                     <a href={project.link} target='_blank' rel='noopener noreferrer'>
                                         <img
                                             src={project.imgSrc}
                                             alt={project.title}
                                             loading='lazy'
-                                            className={`h-60 w-full ${project.imgContain ? 'object-contain bg-purple-950/40 p-6' : 'object-cover object-top'}`}
+                                            className={`h-60 w-full ${project.imgContain ? 'object-contain bg-white/10 p-6' : 'object-cover object-top'}`}
                                         />
                                     </a>
                                     <div className='p-6'>
@@ -48,9 +48,9 @@ const Projects = () => {
                                         <p className='mb-4'>{project.description}</p>
                                         <div className='mb-4 flex flex-wrap gap-4 text-sm font-semibold'>
                                             {project.live && (
-                                                <a href={project.live} target='_blank' rel='noopener noreferrer' className='rounded-full bg-pink-300/90 px-3 py-1 text-stone-900 hover:bg-pink-200'>Live demo ↗</a>
+                                                <a href={project.live} target='_blank' rel='noopener noreferrer' className='rounded-full bg-[#f2c9b4] px-3 py-1 text-stone-900 hover:bg-[#f7ddd0]'>Live demo ↗</a>
                                             )}
-                                            <a href={project.link} target='_blank' rel='noopener noreferrer' className='py-1 text-pink-300 hover:underline'>View on GitHub →</a>
+                                            <a href={project.link} target='_blank' rel='noopener noreferrer' className='py-1 text-[#ffd9c7] hover:underline'>View on GitHub →</a>
                                         </div>
                                         <div className='mb-4'>
                                             <strong>Tech Stack: </strong>
@@ -58,7 +58,7 @@ const Projects = () => {
                                                 {project.techStack.map((tech, index) => (
                                                     <li
                                                         key={index}
-                                                        className='mb-1 mr-2 inline-block rounded-full border-2 border-pink-500/30 px-3 py-1 text-sm font-semibold'
+                                                        className='mb-1 mr-2 inline-block rounded-full border-2 border-white/30 px-3 py-1 text-sm font-semibold'
                                                     >
                                                         {tech}
                                                     </li>
