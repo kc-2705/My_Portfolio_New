@@ -46,7 +46,12 @@ const Projects = () => {
                                     <div className='p-6'>
                                         <h3 className='mb-2 text-lg font-medium lg:text-2xl'>{project.title}</h3>
                                         <p className='mb-4'>{project.description}</p>
-                                        <a href={project.link} target='_blank' rel='noopener noreferrer' className='mb-4 inline-block text-sm font-semibold text-pink-300 hover:underline'>View on GitHub →</a>
+                                        <div className='mb-4 flex flex-wrap gap-4 text-sm font-semibold'>
+                                            {project.live && (
+                                                <a href={project.live} target='_blank' rel='noopener noreferrer' className='rounded-full bg-pink-300/90 px-3 py-1 text-stone-900 hover:bg-pink-200'>Live demo ↗</a>
+                                            )}
+                                            <a href={project.link} target='_blank' rel='noopener noreferrer' className='py-1 text-pink-300 hover:underline'>View on GitHub →</a>
+                                        </div>
                                         <div className='mb-4'>
                                             <strong>Tech Stack: </strong>
                                             <ul>

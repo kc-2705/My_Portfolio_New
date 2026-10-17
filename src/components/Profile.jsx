@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import resume from '../assets/Kavya_Immanni_Resume.pdf';
 import { PROFILE } from '../constants';
-import { RiArrowRightUpLine } from '@remixicon/react';
+import { RiArrowRightUpLine, RiGithubFill, RiLinkedinBoxFill } from '@remixicon/react';
 import kavya from '../assets/kavya.jpg';
 import { gsap } from 'gsap';
 import '../index.css'
@@ -79,6 +79,15 @@ const Profile = () => {
       <p className="hero-text max-w-2xl p-2 text-center text-xl tracking-tighter lg:text-2xl">
         {PROFILE.subheading}
       </p>
+      <ul className="hero-text grid max-w-3xl grid-cols-2 gap-3 px-4 sm:grid-cols-4">
+        {PROFILE.highlights.map((h) => (
+          <li key={h.label} className="rounded-2xl border border-pink-200/20 bg-white/5 px-3 py-3 text-center backdrop-blur-sm">
+            <span className="block text-2xl font-semibold text-pink-200 lg:text-3xl">{h.value}</span>
+            <span className="text-sm text-stone-300">{h.label}</span>
+          </li>
+        ))}
+      </ul>
+      <div className="hero-btn flex flex-wrap items-center justify-center gap-3">
       <a
         href={resume}
         target="_blank"
@@ -91,6 +100,13 @@ const Profile = () => {
         <span>Download Resume</span>
         <RiArrowRightUpLine />
       </a>
+      <a href={PROFILE.links.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="mb-6 rounded-full border border-pink-200/50 p-2 hover:border-pink-400">
+        <RiGithubFill />
+      </a>
+      <a href={PROFILE.links.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="mb-6 rounded-full border border-pink-200/50 p-2 hover:border-pink-400">
+        <RiLinkedinBoxFill />
+      </a>
+      </div>
       <img
         src={kavya}
         alt={PROFILE.name}
