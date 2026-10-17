@@ -32,7 +32,7 @@ export const PROFILE = {
   name: "Kavya Chowdary Immanni",
   role: "Full-Stack Software Developer · React · Node.js · Java",
   roles: ["Full-Stack Developer", "Frontend Developer", "Java Developer", "Integration Developer"],
-  status: "Open to roles · Iowa, USA · Remote OK",
+  status: "Open to roles anywhere in the US · Remote, hybrid or on-site",
   subheading:
     "I build web applications end to end: React/TypeScript interfaces, Node.js and Java/Spring Boot APIs, SQL and NoSQL databases, integrations and cloud deployments, with clean, tested code and a focus on the people who use them.",
   highlights: [
