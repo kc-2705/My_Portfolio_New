@@ -30,8 +30,33 @@ const Projects = () => {
         <section className='pt-16' id='projects' ref={projectRef}>
             <div className='px-4'>
                 <h2 className='mb-8 text-center text-3xl font-medium lg:text-4xl'>Projects</h2>
-                <div className='flex flex-wrap justify-center'>
-                    {PROJECTS.map((project) => {
+                {/* Featured project: full width, image beside the text */}
+                {(() => {
+                    const f = PROJECTS[0];
+                    return (
+                        <div className='project-card mx-auto mb-4 max-w-6xl overflow-hidden rounded-xl border border-white/20 lg:grid lg:grid-cols-2'>
+                            <a href={f.live || f.link} target='_blank' rel='noopener noreferrer'>
+                                <img src={f.imgSrc} alt={f.title} loading='lazy' className='h-64 w-full object-cover lg:h-full' />
+                            </a>
+                            <div className='p-6 lg:p-8'>
+                                <p className='mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#ffd9c7]'>Featured project</p>
+                                <h3 className='mb-3 text-2xl font-semibold lg:text-3xl'>{f.title}</h3>
+                                <p className='mb-4'>{f.description}</p>
+                                <div className='mb-4 flex flex-wrap gap-4 text-sm font-semibold'>
+                                    {f.live && <a href={f.live} target='_blank' rel='noopener noreferrer' className='rounded-full bg-[#f2c9b4] px-3 py-1 text-stone-900 hover:bg-[#f7ddd0]'>Live demo ↗</a>}
+                                    <a href={f.link} target='_blank' rel='noopener noreferrer' className='py-1 text-[#ffd9c7] hover:underline'>View on GitHub →</a>
+                                </div>
+                                <ul>
+                                    {f.techStack.map((tech) => (
+                                        <li key={tech} className='mb-1 mr-2 inline-block rounded-full border-2 border-white/30 px-3 py-1 text-sm font-semibold'>{tech}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    );
+                })()}
+                <div className='mx-auto flex max-w-6xl flex-wrap justify-center'>
+                    {PROJECTS.slice(1).map((project) => {
                         return (
                             <div key={project.id} className='flex w-full flex-col p-4 md:w-1/2 lg:w-1/3'>
                                 <div className=' flex-grow overflow-hidden rounded-xl border border-white/20'>

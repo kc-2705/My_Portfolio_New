@@ -37,7 +37,7 @@ export const PROFILE = {
     { value: "~5 yrs", label: "building software" },
     { value: "8", label: "internal tools shipped at DSHB" },
     { value: "15+", label: "healthcare API endpoints at Optum Rx" },
-    { value: "4", label: "3D games in Playverse" },
+    { value: "7", label: "projects built" },
   ],
   links: {
     github: "https://github.com/kc-2705",
