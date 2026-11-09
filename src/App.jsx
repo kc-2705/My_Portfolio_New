@@ -1,30 +1,32 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Profile from './components/Profile'
-import Projects from './components/Projects'
-import './index.css'
-import Skills from './components/Skills'
+import TopNav from './components/TopNav'
+import Sidebar from './components/Sidebar'
+import Career from './components/Career'
 import Experience from './components/Experience'
+import Projects from './components/Projects'
+import Skills from './components/Skills'
 import Education from './components/Education'
 import Contact from './components/Contact'
+import './index.css'
 
 const App = () => {
   return (
-    <main className='mx-auto max-w-7xl overflow-x-hidden antialiased'>
-      <div className='bg-image fixed inset-0 bg-cover bg-fixed bg-center'>
+    <div className='antialiased'>
+      <TopNav />
+      <div className='lg:grid lg:grid-cols-[minmax(340px,400px)_1fr]'>
+        <Sidebar />
+        <main className='mx-auto grid w-full max-w-4xl gap-20 px-4 py-12 sm:px-8 lg:px-12 lg:py-14'>
+          <Career />
+          <Experience />
+          <Projects />
+          <Skills />
+          <Education />
+          <Contact />
+          <p className='-mt-12 text-center text-xs text-slate-400'>© 2026 Kavya Chowdary Immanni</p>
+        </main>
       </div>
-
-      <div className='relative z-10'>
-        <Navbar />
-        <Profile />
-        <Projects />
-        <Skills />
-        <Experience />
-        <Education />
-        <Contact />
-      </div>
-    </main>
-      )
+    </div>
+  )
 }
 
 export default App

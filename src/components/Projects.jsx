@@ -1,113 +1,56 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import { PROJECTS } from '../constants'
-import {gsap} from 'gsap'
-import { ScrollTrigger } from 'gsap/all'
+import SectionHeading from './SectionHeading'
 
-gsap.registerPlugin(ScrollTrigger);
+const Links = ({ p, small }) => (
+    <div className='flex flex-wrap items-center gap-x-4 gap-y-2'>
+        {p.live && <a href={p.live} target='_blank' rel='noopener noreferrer' className={small ? 'link !text-[13px]' : 'btn-primary !px-4 !py-1.5'}>Live demo ↗</a>}
+        <a href={p.link} target='_blank' rel='noopener noreferrer' className={`link ${small ? '!text-[13px]' : ''}`}>GitHub →</a>
+        {p.article && <a href={p.article} target='_blank' rel='noopener noreferrer' className={`link ${small ? '!text-[13px]' : ''}`}>Article →</a>}
+    </div>
+)
 
 const Projects = () => {
-    const projectRef = useRef(null)
-    const [filter, setFilter] = useState('All')
-    const cats = ['All', ...new Set(PROJECTS.slice(1).map((p) => p.category))]
-    const shown = PROJECTS.slice(1).filter((p) => filter === 'All' || p.category === filter)
-
-    useEffect(() => {
-        const ctx=gsap.context(() => {
-            gsap.from(".project-card", {
-                opacity: 0,
-                y: 50,
-                duration:1,
-                ease: 'power3.out',
-                stagger: 0.3,
-                scrollTrigger: {
-                    trigger: projectRef.current,
-                    start: "top 80%",
-                    toggleActions: "play none none none",
-                }
-            })
-        }, projectRef);
-        return ()=> ctx.revert();
-    },[])
+    const showcase = PROJECTS.slice(0, 4)
+    const more = PROJECTS.slice(4)
 
     return (
-        <section className='pt-16' id='projects' ref={projectRef}>
-            <div className='px-4'>
-                <h2 className='mb-8 text-center text-3xl font-medium lg:text-4xl'>Projects</h2>
-                {/* Featured project: full width, image beside the text */}
-                {(() => {
-                    const f = PROJECTS[0];
-                    return (
-                        <div className='project-card mx-auto mb-4 max-w-6xl overflow-hidden rounded-xl border border-slate-200 lg:grid lg:grid-cols-2'>
-                            <a href={f.live || f.link} target='_blank' rel='noopener noreferrer'>
-                                <img src={f.imgSrc} alt={f.title} loading='lazy' className='h-64 w-full object-cover lg:h-full' />
-                            </a>
-                            <div className='p-6 lg:p-8'>
-                                <p className='mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-indigo-600'>Featured project</p>
-                                <h3 className='mb-3 text-2xl font-semibold lg:text-3xl'>{f.title}</h3>
-                                <p className='mb-4'>{f.description}</p>
-                                <div className='mb-4 flex flex-wrap gap-4 text-sm font-semibold'>
-                                    {f.live && <a href={f.live} target='_blank' rel='noopener noreferrer' className='rounded-full bg-indigo-600 px-3 py-1 text-white hover:bg-indigo-500'>Live demo ↗</a>}
-                                    <a href={f.link} target='_blank' rel='noopener noreferrer' className='py-1 text-indigo-600 hover:underline'>View on GitHub →</a>
-                                </div>
-                                <ul>
-                                    {f.techStack.map((tech) => (
-                                        <li key={tech} className='mb-1 mr-2 inline-block rounded-full border-2 border-slate-300 px-3 py-1 text-sm font-semibold'>{tech}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    );
-                })()}
-                <div className='mb-2 mt-8 flex flex-wrap justify-center gap-2' role='tablist' aria-label='Filter projects'>
-                    {cats.map((c) => (
-                        <button key={c} role='tab' aria-selected={filter === c} onClick={() => setFilter(c)}
-                            className={`rounded-full border px-4 py-1.5 text-sm font-semibold transition-colors ${filter === c ? 'border-indigo-600 bg-indigo-600 text-white' : 'border-slate-300 bg-white text-slate-700 hover:border-indigo-400'}`}>
-                            {c}
-                        </button>
-                    ))}
-                </div>
-                <div className='mx-auto flex max-w-6xl flex-wrap justify-center'>
-                    {shown.map((project) => {
-                        return (
-                            <div key={project.id} className='flex w-full flex-col p-4 md:w-1/2 lg:w-1/3'>
-                                <div className=' flex-grow overflow-hidden rounded-xl border border-slate-200'>
-                                    <a href={project.link} target='_blank' rel='noopener noreferrer'>
-                                        <img
-                                            src={project.imgSrc}
-                                            alt={project.title}
-                                            loading='lazy'
-                                            className={`h-60 w-full ${project.imgContain ? 'object-contain bg-slate-50 p-6' : 'object-cover object-top'}`}
-                                        />
-                                    </a>
-                                    <div className='p-6'>
-                                        <h3 className='mb-2 text-lg font-medium lg:text-2xl'>{project.title}</h3>
-                                        <p className='mb-4'>{project.description}</p>
-                                        <div className='mb-4 flex flex-wrap gap-4 text-sm font-semibold'>
-                                            {project.live && (
-                                                <a href={project.live} target='_blank' rel='noopener noreferrer' className='rounded-full bg-indigo-600 px-3 py-1 text-white hover:bg-indigo-500'>Live demo ↗</a>
-                                            )}
-                                            <a href={project.link} target='_blank' rel='noopener noreferrer' className='py-1 text-indigo-600 hover:underline'>View on GitHub →</a>
-                                        </div>
-                                        <div className='mb-4'>
-                                            <strong>Tech Stack: </strong>
-                                            <ul>
-                                                {project.techStack.map((tech, index) => (
-                                                    <li
-                                                        key={index}
-                                                        className='mb-1 mr-2 inline-block rounded-full border-2 border-slate-300 px-3 py-1 text-sm font-semibold'
-                                                    >
-                                                        {tech}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    })}
+        <section id='projects'>
+            <SectionHeading eyebrow='What I have built' title='Projects' />
 
-                </div>
+            <div className='grid gap-12'>
+                {showcase.map((p, i) => (
+                    <article key={p.id} className='grid items-center gap-6 md:grid-cols-2 md:gap-8'>
+                        <a href={p.live || p.link} target='_blank' rel='noopener noreferrer'
+                            className={`block overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_12px_30px_rgba(15,23,42,0.10)] transition-transform hover:-translate-y-1 ${i % 2 ? 'md:order-2' : ''}`}>
+                            <img src={p.imgSrc} alt={p.title} loading='lazy' className='aspect-[16/10] w-full object-cover object-top' />
+                        </a>
+                        <div className='min-w-0'>
+                            <p className='text-xs font-bold uppercase tracking-[0.15em] text-indigo-600'>{p.category}{p.live ? ' · Live' : ''}</p>
+                            <h3 className='mt-1 text-xl font-extrabold'>{p.title}</h3>
+                            <p className='mt-2 text-[15px] text-slate-600'>{p.description}</p>
+                            <ul className='mt-3 flex flex-wrap gap-1.5'>
+                                {p.techStack.map((tech) => <li key={tech} className='tag'>{tech}</li>)}
+                            </ul>
+                            <div className='mt-4'><Links p={p} /></div>
+                        </div>
+                    </article>
+                ))}
+            </div>
+
+            <h3 className='mb-4 mt-14 text-xs font-bold uppercase tracking-[0.2em] text-slate-500'>More projects</h3>
+            <div className='grid gap-4 sm:grid-cols-2'>
+                {more.map((p) => (
+                    <article key={p.id} className='card flex gap-4 p-4'>
+                        <img src={p.imgSrc} alt='' loading='lazy'
+                            className={`h-20 w-28 shrink-0 rounded-lg border border-slate-200 bg-slate-50 ${p.imgContain ? 'object-contain p-2' : 'object-cover object-top'}`} />
+                        <div className='min-w-0'>
+                            <h4 className='font-bold leading-snug'>{p.title}</h4>
+                            <p className='mt-1 line-clamp-2 text-[13px] text-slate-600'>{p.description}</p>
+                            <div className='mt-2'><Links p={p} small /></div>
+                        </div>
+                    </article>
+                ))}
             </div>
         </section>
     )

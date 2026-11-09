@@ -1,49 +1,44 @@
-import React, { useEffect, useRef } from 'react'
-import { EDUCATION } from '../constants';
-import { gsap } from 'gsap/gsap-core'
-import { ScrollTrigger } from 'gsap/all'
+import React from 'react'
+import { EDUCATION, CERTIFICATIONS } from '../constants';
+import SectionHeading from './SectionHeading';
 
-gsap.registerPlugin(ScrollTrigger)
-
-const Education = () => {
-  const educationRef = useRef();
-
-  useEffect(()=>{
-    const ctx=gsap.context(()=> {
-        gsap.from(".education-item", {
-            opacity:0,
-            y:50,
-            duration: 1,
-            ease: "power3.out",
-            stagger: 0.3,
-            scrollTrigger:{
-            trigger: educationRef.current,
-            start: "top 80%",
-            toggleActions: "play none none none",
-        }
-    })
-},educationRef)
-return ()=> ctx.revert()
-},[])
-
-  return (
-    <section className='py-16' id='education' ref={educationRef}>
-        <div className='mx-auto max-w-full px-4'>
-            <h2 className='mb-8 text-center text-3xl font-medium lg:text-4xl'>Education</h2>
-            <div className='flex flex-col space-y-8'>
-                {EDUCATION.map((edu)=> (
-                    <div key={edu.id} className='education-item rounded-xl border border-slate-200 p-6'>
-                        <h3 className='mb-2 text-lg lg:text-2xl'>{edu.degree}</h3>
-                        <h4 className='text-lg font-medium lg:text-xl'>{edu.institution}</h4>
-                        <p className='text-sm lg:text-base'>{edu.duration}</p>
-                        <p className='text-sm lg:text-base'>CGPA: {edu.cgpa}</p>
-                        <p className='mt-4'>{edu.courses}</p>
+const Education = () => (
+    <section id='education'>
+        <SectionHeading eyebrow='Background' title='Education' />
+        <ol className='-mx-4 grid gap-2 sm:-mx-6'>
+            {EDUCATION.map((edu) => (
+                <li key={edu.id} className='grid gap-2 rounded-2xl p-4 transition-colors hover:bg-white hover:shadow-sm sm:grid-cols-[140px_1fr] sm:gap-6 sm:p-6'>
+                    <div>
+                        <p className='text-xs font-bold uppercase tracking-wider text-slate-500'>{edu.duration}</p>
+                        <p className='text-xs text-slate-400'>{edu.gpa}</p>
                     </div>
-                ))}
-            </div>
-        </div>
+                    <div className='min-w-0'>
+                        <h3 className='text-lg font-bold'>{edu.degree}</h3>
+                        <p className='font-semibold text-indigo-600'>{edu.institution}</p>
+                        <ul className='mt-3 flex flex-wrap gap-1.5'>
+                            {edu.courses.split(', ').map((c) => <li key={c} className='tag'>{c}</li>)}
+                        </ul>
+                    </div>
+                </li>
+            ))}
+        </ol>
+
+        <h3 className='mb-4 mt-10 text-xs font-bold uppercase tracking-[0.2em] text-slate-500'>Certifications & recognition</h3>
+        <ul className='grid gap-3 sm:grid-cols-3'>
+            {CERTIFICATIONS.map((c) => {
+                const m = c.match(/^(.*) \((.*)\)$/);
+                return (
+                    <li key={c} className='card flex gap-3 p-4'>
+                        <span className='flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-indigo-50 text-sm text-indigo-600' aria-hidden='true'>✓</span>
+                        <div className='min-w-0'>
+                            <p className='text-sm font-semibold leading-snug text-slate-800'>{m ? m[1] : c}</p>
+                            {m && <p className='mt-0.5 text-xs text-slate-500'>{m[2]}</p>}
+                        </div>
+                    </li>
+                );
+            })}
+        </ul>
     </section>
-  )
-}
+)
 
 export default Education

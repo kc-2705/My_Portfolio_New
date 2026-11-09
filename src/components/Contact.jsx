@@ -1,68 +1,19 @@
-import { RiGithubFill, RiLinkedinBoxFill } from '@remixicon/react';
-import React, { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
+import { RiGithubFill, RiLinkedinBoxFill, RiMailLine } from '@remixicon/react';
+import React from 'react';
+import { PROFILE } from '../constants';
 
-gsap.registerPlugin(ScrollTrigger);
-
-const Contact = () => {
-  const contactRef = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".contact-item", {
-        opacity: 0,
-        y: 20,
-        duration: 1,
-        ease: "power3.out",
-        stagger: 0.4,
-        scrollTrigger: {
-          trigger: contactRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-    }, contactRef);
-
-    return () => ctx.revert();
-  }, []);
-
-  return (
-    <section className="py-16" id="contact" ref={contactRef}>
-      <div className="px-4 text-center">
-        <h2 className="mb-8 text-3xl font-medium lg:text-4xl">Contact</h2>
-        <p className="mb-4 text-lg lg:text-xl">
-          Feel free to reach out to me via email:{" "}
-          <a
-            href="mailto:ikavyach@gmail.com"
-            className="border-b"
-          >
-            ikavyach@gmail.com
-          </a>
-        </p>
-        <div className="mt-8 flex justify-center space-x-6">
-          <a
-            href="https://www.linkedin.com/in/kavya-immanni/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-item"
-            aria-label="Visit my LinkedIn profile"
-          >
-            <RiLinkedinBoxFill className="text-3xl" />
-          </a>
-          <a
-            href="https://github.com/kc-2705"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-item"
-            aria-label="Visit my Github profile"
-          >
-            <RiGithubFill className="text-3xl" />
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-};
+const Contact = () => (
+  <section id="contact" className="rounded-2xl bg-slate-900 px-6 py-10 text-center sm:px-10">
+    <p className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-300">Contact</p>
+    <h2 className="mt-1 text-2xl font-extrabold !text-white sm:text-3xl">Let&apos;s talk about your team</h2>
+    <p className="mx-auto mt-3 max-w-xl text-slate-400">I&apos;m open to full stack roles in the US. The quickest way to reach me is email.</p>
+    <p className="mt-5 select-all text-lg font-semibold text-white">{PROFILE.links.email}</p>
+    <div className="mt-6 flex flex-wrap justify-center gap-3">
+      <a href={`mailto:${PROFILE.links.email}`} className="btn-primary"><RiMailLine className="h-4 w-4" /> Email me</a>
+      <a href={PROFILE.links.linkedin} target="_blank" rel="noopener noreferrer" className="btn-ghost"><RiLinkedinBoxFill className="h-4 w-4" /> LinkedIn</a>
+      <a href={PROFILE.links.github} target="_blank" rel="noopener noreferrer" className="btn-ghost"><RiGithubFill className="h-4 w-4" /> GitHub</a>
+    </div>
+  </section>
+);
 
 export default Contact;

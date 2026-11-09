@@ -1,4 +1,5 @@
 import projectPlayverse from "../assets/project-playverse.jpg";
+import projectJobHunt from "../assets/project-jobhunt.png";
 import projectExpenso from "../assets/project-expenso.png";
 import projectAskPastMe from "../assets/project-askpastme.jpg";
 import projectOrderDesk from "../assets/project-orderdesk.png";
@@ -6,44 +7,38 @@ import projectFun from "../assets/project-fun.png";
 import project2 from "../assets/handcricket.webp";
 import project4 from "../assets/smarthome.jfif";
 import {
-  SiTypescript, SiJavascript, SiHtml5, SiCss3, SiReact, SiNextdotjs, SiRedux, SiReactquery, SiVite,
-  SiTailwindcss, SiAntdesign, SiBabylondotjs, SiNodedotjs, SiExpress, SiSpringboot, SiGraphql,
-  SiSocketdotio, SiApachekafka, SiPostman, SiJsonwebtokens, SiMysql, SiPostgresql, SiMongodb, SiRedis,
-  SiAmazonec2, SiAmazons3, SiDocker, SiLinux, SiGithubactions, SiRender, SiJest, SiTestinglibrary,
-  SiCypress, SiJunit5, SiGit, SiGithub, SiJira, SiConfluence, SiOracle, SiGoogleanalytics,
-  SiGoogletagmanager, SiGithubcopilot,
+  SiReact, SiTypescript, SiJavascript, SiHtml5, SiRedux, SiNextdotjs, SiNodedotjs, SiExpress,
+  SiSpringboot, SiApachekafka, SiRedis, SiSocketdotio, SiPostgresql, SiMysql, SiMongodb, SiOracle,
+  SiJest, SiJunit5, SiDocker, SiGit, SiJenkins, SiGithubactions, SiSplunk, SiAntdesign,
 } from "react-icons/si";
-import { FaJava, FaAws } from "react-icons/fa";
+import { FaJava, FaAws, FaDatabase } from "react-icons/fa";
 import { VscAzure } from "react-icons/vsc";
-import {
-  TbApi, TbShieldLock, TbDatabaseCog, TbTestPipe, TbRocket, TbUsersGroup, TbFileText,
-  TbDeviceMobile, TbSql, TbBolt, TbAccessible, TbTransfer, TbPlugConnected,
-} from "react-icons/tb";
+import { TbBrain, TbTestPipe, TbShieldLock, TbApi } from "react-icons/tb";
 
 export const NAVIGATION_LINKS = [
+  { label: "Experience", href: "#work" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#work" },
   { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const PROFILE = {
   name: "Kavya Chowdary Immanni",
-  role: "Full-Stack Software Developer · React · Node.js · Java",
-  roles: ["Full-Stack Developer", "Frontend Developer", "Java Developer", "Integration Developer"],
-  status: "Open to roles anywhere in the US · Remote, hybrid or on-site",
+  role: "Full Stack Engineer · React · Node.js · TypeScript · Java",
+  status: "Open to full stack roles in the US · Remote, hybrid or on-site",
   subheading:
-    "I build web applications end to end: React/TypeScript interfaces, Node.js and Java/Spring Boot APIs, SQL and NoSQL databases, integrations and cloud deployments, with clean, tested code and a focus on the people who use them.",
+    "I build web applications end to end: React and TypeScript front ends, Node.js and Spring Boot APIs, SQL data layers, automated tests and production support. Lately I also build AI features with LLM tool calling and RAG.",
   highlights: [
-    { value: "~5 yrs", label: "building software" },
-    { value: "8", label: "internal tools shipped at DSHB" },
-    { value: "15+", label: "healthcare API endpoints at Optum Rx" },
-    { value: "7", label: "projects built" },
+    { value: "5 yrs", label: "building software" },
+    { value: "60", label: "secured API endpoints I own" },
+    { value: "72", label: "automated tests on my portal" },
+    { value: "3", label: "live apps you can try" },
   ],
   links: {
     github: "https://github.com/kc-2705",
     linkedin: "https://www.linkedin.com/in/kavya-immanni/",
+    email: "ikavyach@gmail.com",
   },
 };
 
@@ -51,244 +46,310 @@ export const PROJECTS = [
   {
     id: 1,
     title: "Playverse – 3D Game Hub",
-    category: "Full-stack",
+    category: "Full stack",
     description:
-      "Full-stack game platform with 4 realistic 3D games, accounts, leaderboards and real-time online multiplayer. Includes enemy AI (vision cones, A* path finding), procedural worlds, a server-authoritative Socket.io game server, 11 automated tests, and an installable PWA and Android app.",
-    techStack: ["React", "TypeScript", "Babylon.js", "Node.js", "Express", "Socket.io", "MongoDB", "PWA"],
+      "Full stack game platform with 4 playable 3D games, accounts, leaderboards and saved progress. Real-time multiplayer hide-and-seek runs on a server-authoritative Socket.IO game server with 11 tests, enemy AI (vision cones, A* path finding) and 5 themed worlds. Installs as a mobile PWA and Android app.",
+    techStack: ["React", "TypeScript", "Babylon.js", "Node.js", "Express", "Socket.IO", "MongoDB", "PWA"],
     imgSrc: projectPlayverse,
     link: "https://github.com/kc-2705/playverse",
     live: "https://playverse-app.onrender.com",
   },
   {
     id: 2,
-    title: "Expenso – Personal Finance Tracker",
-    category: "Full-stack",
+    title: "Job Hunt Copilot – AI Web App",
+    category: "AI",
     description:
-      "MERN app to track income and expenses, set monthly budgets, automate recurring payments and import bank CSVs, with charts, CSV/PDF export, dark mode and a secure API (JWT, bcrypt, Zod validation, rate limiting) backed by automated tests.",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Ant Design", "React Query", "JWT"],
+      "Shows job seekers how well they fit a role. An LLM pipeline pulls a posting's requirements and matches each one to resume bullets with hybrid search (embeddings plus keywords), and every model output is checked in code. 39 automated tests. DEV Hacktoberfest 2026 challenge entry with a published article.",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "LLM APIs", "RAG", "Transformers.js"],
+    imgSrc: projectJobHunt,
+    link: "https://github.com/kc-2705/job-hunt-copilot",
+    live: "https://job-hunt-copilot-web.onrender.com",
+    article: "https://dev.to/kavyachowdary_immanni/job-hunt-copilot-stop-reading-job-posts-you-cant-apply-to-4a3j",
+  },
+  {
+    id: 3,
+    title: "Expenso – Personal Finance Tracker",
+    category: "Full stack",
+    description:
+      "MERN app for income, expenses, budgets, recurring payments and bank CSV import, with charts, CSV/PDF export and a secure API (JWT, bcrypt, Zod validation, rate limiting) covered by automated tests and CI.",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Ant Design", "React Query"],
     imgSrc: projectExpenso,
     link: "https://github.com/kc-2705/expense-management-app",
   },
   {
-    id: 3,
-    title: "Ask Past Me – Voice Journal App",
+    id: 4,
+    title: "Ask Past Me – Voice Journal",
     category: "Mobile",
     description:
-      "Android voice journal built with React Native. Record your day, then search past notes or replay what you said on the same day in past years. Works fully offline with SQLite full-text search, reminders and fingerprint lock.",
+      "Android voice journal: record your day, search past notes, or replay what you said on this day in past years. Works offline with SQLite full-text search, reminders and fingerprint lock.",
     techStack: ["React Native", "Expo", "TypeScript", "SQLite"],
     imgSrc: projectAskPastMe,
     link: "https://github.com/kc-2705/ask-past-me",
   },
   {
-    id: 4,
-    title: "OrderDesk – Order Management Dashboard",
+    id: 5,
+    title: "OrderDesk – Order Dashboard",
     category: "Frontend",
     description:
-      "React dashboard to create, filter and review customer orders, with validated order forms and line items, status and date filters, sorting, order history, KPI cards and a collapsible sidebar layout.",
+      "React dashboard to create, filter and review orders, with validated forms and line items, status and date filters, sorting, order history and KPI cards.",
     techStack: ["React", "Vite", "React Router", "Ant Design"],
     imgSrc: projectOrderDesk,
     link: "https://github.com/kc-2705/orders-management-app",
     live: "https://kc-2705.github.io/orders-management-app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Fun Web Projects",
     category: "Frontend",
     description:
-      "Creative front-end experiments: an interactive day-and-night flower garden, a five-game pocket arcade, a lamp-themed login and small animation pieces built with plain HTML, CSS and JavaScript.",
+      "Front-end experiments: a day-and-night flower garden, a five-game pocket arcade, a lamp-themed login and small animations in plain HTML, CSS and JavaScript.",
     techStack: ["JavaScript", "SVG", "Canvas", "CSS Animations"],
     imgSrc: projectFun,
     link: "https://github.com/kc-2705/fun-web-programming",
     live: "https://kc-2705.github.io/fun-web-programming/",
   },
   {
-    id: 6,
-    title: "Multiplayer Hand Cricket Game with Chat",
+    id: 7,
+    title: "Multiplayer Hand Cricket",
     category: "Games",
     description:
-      "Multiplayer hand cricket game in Python using Pygame for graphics and socket programming for networking, with a server managing game sessions, player moves, scores and chat.",
+      "Networked hand cricket game in Python with Pygame graphics and a socket server that manages sessions, moves, scores and chat.",
     techStack: ["Python", "Pygame", "Sockets"],
     imgSrc: project2,
     link: "https://github.com/kc-2705/Hand-Cricket",
   },
   {
-    id: 7,
-    title: "Smart Home Monitoring (GSHAM Dataset)",
+    id: 8,
+    title: "Smart Home Energy Prediction",
     category: "Data",
     description:
-      "Energy-usage prediction with Decision Tree, Random Forest and LSTM models: EDA, Min-Max scaling, MAE/MSE evaluation and Tableau dashboards to present the insights.",
-    techStack: ["Python", "Regression Models", "LSTM", "Tableau"],
+      "Energy-use prediction on the GSHAM dataset with Decision Tree, Random Forest and LSTM models, evaluated with MAE/MSE and presented in Tableau dashboards.",
+    techStack: ["Python", "LSTM", "Random Forest", "Tableau"],
     imgSrc: project4,
+    imgContain: true,
     link: "https://github.com/kc-2705/Smart-home-Monitoring-system-using-GSHAM-Dataset",
   },
 ];
 
+// Years of hands-on use, as confirmed by Kavya.
 export const SKILL_GROUPS = [
   {
-    title: "Languages",
-    skills: [
-      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
-      { name: "JavaScript (ES6+)", icon: <SiJavascript className="text-yellow-400" /> },
-      { name: "Java", icon: <FaJava className="text-red-500" /> },
-      { name: "SQL", icon: <TbSql className="text-sky-300" /> },
-      { name: "HTML5", icon: <SiHtml5 className="text-orange-500" /> },
-      { name: "CSS3", icon: <SiCss3 className="text-blue-400" /> },
-    ],
-  },
-  {
     title: "Frontend",
-    skills: [
-      { name: "React", icon: <SiReact className="text-cyan-400" /> },
-      { name: "Next.js", icon: <SiNextdotjs className="text-stone-100" /> },
-      { name: "Redux / Redux Toolkit", icon: <SiRedux className="text-purple-400" /> },
-      { name: "Context API", icon: <SiReact className="text-cyan-300" /> },
-      { name: "React Query", icon: <SiReactquery className="text-red-400" /> },
-      { name: "Vite", icon: <SiVite className="text-violet-400" /> },
-      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
-      { name: "Ant Design", icon: <SiAntdesign className="text-blue-500" /> },
-      { name: "Accessibility (WCAG 2.1)", icon: <TbAccessible className="text-sky-300" /> },
-      { name: "Responsive Design", icon: <TbDeviceMobile className="text-pink-300" /> },
-      { name: "Babylon.js (3D)", icon: <SiBabylondotjs className="text-orange-300" /> },
+    items: [
+      { name: "React", yrs: 5.5, icon: SiReact, color: "#149eca" },
+      { name: "TypeScript", yrs: 3, icon: SiTypescript, color: "#3178c6" },
+      { name: "JavaScript (ES6+)", yrs: 5.5, icon: SiJavascript, color: "#d4a20b" },
+      { name: "HTML5 / CSS3 / Sass", yrs: 5.5, icon: SiHtml5, color: "#e34f26" },
+      { name: "Redux Toolkit", yrs: 3, icon: SiRedux, color: "#764abc" },
+      { name: "Ant Design", yrs: 3, icon: SiAntdesign, color: "#1677ff" },
     ],
+    also: ["React Query", "React Router", "Next.js", "Vite", "Accessibility (WCAG 2.1)"],
   },
   {
-    title: "Backend & APIs",
-    skills: [
-      { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
-      { name: "Express", icon: <SiExpress className="text-stone-200" /> },
-      { name: "Spring Boot", icon: <SiSpringboot className="text-green-500" /> },
-      { name: "REST API Design", icon: <TbApi className="text-orange-300" /> },
-      { name: "GraphQL", icon: <SiGraphql className="text-pink-500" /> },
-      { name: "Socket.io", icon: <SiSocketdotio className="text-stone-100" /> },
-      { name: "JWT Auth", icon: <SiJsonwebtokens className="text-pink-400" /> },
-      { name: "RBAC", icon: <TbShieldLock className="text-teal-300" /> },
+    title: "Backend",
+    items: [
+      { name: "Java", yrs: 3.5, icon: FaJava, color: "#e76f00" },
+      { name: "Spring Boot", yrs: 3.5, icon: SiSpringboot, color: "#6db33f" },
+      { name: "Node.js", yrs: 4.5, icon: SiNodedotjs, color: "#5fa04e" },
+      { name: "Express", yrs: 4.5, icon: SiExpress, color: "#1e293b" },
+      { name: "Apache Kafka", yrs: 2.5, icon: SiApachekafka, color: "#1e293b" },
+      { name: "Redis", yrs: 2.5, icon: SiRedis, color: "#dc382d" },
     ],
+    also: ["REST API design", "OpenAPI", "Socket.IO", "TIBCO EMS/JMS"],
   },
   {
-    title: "Databases & Performance",
-    skills: [
-      { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
-      { name: "MySQL", icon: <SiMysql className="text-sky-400" /> },
-      { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-      { name: "Redis", icon: <SiRedis className="text-red-500" /> },
-      { name: "Schema Design & Indexing", icon: <TbDatabaseCog className="text-purple-300" /> },
-      { name: "Query Optimization", icon: <TbBolt className="text-yellow-300" /> },
+    title: "Databases",
+    items: [
+      { name: "SQL", yrs: 5, icon: FaDatabase, color: "#4f46e5" },
+      { name: "SQL Server", yrs: 4, icon: FaDatabase, color: "#cc2927" },
+      { name: "Oracle", yrs: 4, icon: SiOracle, color: "#c74634" },
+      { name: "PostgreSQL", yrs: 4, icon: SiPostgresql, color: "#4169e1" },
+      { name: "MongoDB", yrs: 4, icon: SiMongodb, color: "#47a248" },
     ],
+    also: ["MySQL", "SuiteQL", "Schema design", "Indexing", "Query tuning"],
   },
   {
-    title: "Integration",
-    skills: [
-      { name: "Apache Kafka", icon: <SiApachekafka className="text-stone-100" /> },
-      { name: "Third-Party APIs", icon: <TbPlugConnected className="text-lime-300" /> },
-      { name: "SFTP File Exchange", icon: <TbTransfer className="text-sky-300" /> },
-      { name: "NetSuite & SuiteScript", icon: <SiOracle className="text-red-500" /> },
+    title: "Testing & Quality",
+    items: [
+      { name: "JUnit 5 / Mockito", yrs: 3.5, icon: SiJunit5, color: "#25a162" },
+      { name: "Jest", yrs: 3.5, icon: SiJest, color: "#c21325" },
+      { name: "Playwright", yrs: 3.5, icon: TbTestPipe, color: "#2ead33" },
     ],
+    also: ["React Testing Library", "Supertest", "Cypress", "axe-core", "Lighthouse", "Code reviews"],
   },
   {
     title: "Cloud & DevOps",
-    skills: [
-      { name: "AWS", icon: <FaAws className="text-orange-400" /> },
-      { name: "EC2", icon: <SiAmazonec2 className="text-orange-400" /> },
-      { name: "S3", icon: <SiAmazons3 className="text-red-400" /> },
-      { name: "Azure Blob Storage", icon: <VscAzure className="text-sky-400" /> },
-      { name: "Docker", icon: <SiDocker className="text-sky-500" /> },
-      { name: "GitHub Actions", icon: <SiGithubactions className="text-sky-400" /> },
-      { name: "CI/CD", icon: <TbRocket className="text-pink-300" /> },
-      { name: "Render", icon: <SiRender className="text-stone-100" /> },
-      { name: "Linux", icon: <SiLinux className="text-yellow-200" /> },
+    items: [
+      { name: "Git & GitHub", yrs: 5, icon: SiGit, color: "#f05032" },
+      { name: "CI/CD pipelines", yrs: 4, icon: SiGithubactions, color: "#2088ff" },
+      { name: "Docker", yrs: 3.5, icon: SiDocker, color: "#2496ed" },
+      { name: "Azure (AKS, Key Vault)", yrs: 2.5, icon: VscAzure, color: "#0078d4" },
+      { name: "AWS", yrs: 1, icon: FaAws, color: "#ff9900" },
+      { name: "Splunk / Grafana", yrs: 2.5, icon: SiSplunk, color: "#1e293b" },
     ],
+    also: ["Jenkins", "Maven", "Render", "Linux servers"],
   },
   {
-    title: "Testing",
-    skills: [
-      { name: "Jest", icon: <SiJest className="text-red-400" /> },
-      { name: "React Testing Library", icon: <SiTestinglibrary className="text-red-500" /> },
-      { name: "Cypress", icon: <SiCypress className="text-stone-100" /> },
-      { name: "JUnit", icon: <SiJunit5 className="text-green-400" /> },
-      { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
-      { name: "API & Integration Testing", icon: <TbTestPipe className="text-lime-300" /> },
+    title: "Security & AI",
+    items: [
+      { name: "Auth (JWT, RBAC, OTP)", yrs: 3, icon: TbShieldLock, color: "#0f766e" },
+      { name: "REST API security", yrs: 3, icon: TbApi, color: "#7c3aed" },
+      { name: "LLM tool calling & RAG", yrs: 3, icon: TbBrain, color: "#db2777" },
     ],
-  },
-  {
-    title: "Collaboration & Tools",
-    skills: [
-      { name: "Git", icon: <SiGit className="text-orange-500" /> },
-      { name: "GitHub", icon: <SiGithub className="text-stone-100" /> },
-      { name: "Jira", icon: <SiJira className="text-blue-400" /> },
-      { name: "Confluence", icon: <SiConfluence className="text-blue-300" /> },
-      { name: "Agile / Scrum", icon: <TbUsersGroup className="text-purple-300" /> },
-      { name: "Technical Docs", icon: <TbFileText className="text-stone-200" /> },
-      { name: "Google Analytics 4", icon: <SiGoogleanalytics className="text-amber-400" /> },
-      { name: "Google Tag Manager", icon: <SiGoogletagmanager className="text-blue-400" /> },
-      { name: "GitHub Copilot", icon: <SiGithubcopilot className="text-stone-100" /> },
-    ],
+    also: ["bcrypt", "Rate limiting", "Helmet / CORS", "HIPAA / PHI", "Claude Code", "GitHub Copilot"],
   },
 ];
 
 export const EXPERIENCES = [
   {
-    yearRange: "Feb 2026 - Present",
-    role: "Application Developer",
-    company: "DSHB (Developmental Studies Hybridoma Bank)",
+    yearRange: "Feb 2026 – Present",
+    role: "Software Developer, Full Stack",
+    company: "Developmental Studies Hybridoma Bank (DSHB), University of Iowa",
     location: "Iowa City, IA",
-    description: [
-      "Design and build internal and external web applications with TypeScript, React, Node.js/Express and MySQL, delivering 8 internal tools and portals used daily by ~15 staff.",
-      "Built the DSHB Depositor Portal, moving external researchers’ antibody and hybridoma deposits from email to an online submit-and-track workflow that handles ~50–60 deposits a month.",
-      "Secured the portal’s API with JWT authentication and role-based access control, and added indexes and connection pooling so pages that used to show long loading spinners now load noticeably faster.",
-      "Managed client state with Redux Toolkit and Context API and server data with React Query; built reusable components and shared API modules used across the tools.",
-      "Built and maintain 5+ integrations (Celigo, SuiteCommerce Advanced, Athos Commerce, Bioz, DocuSign) with the NetSuite ERP using SuiteScript, RESTlets and REST APIs.",
-      "Automated a weekly SFTP report that saves staff about an hour of manual work every week, and built a React blog that lets non-technical staff publish website content on their own.",
-      "Test with Jest, React Testing Library, Cypress and Postman, ship updates at least monthly, and mentor 2 interns.",
+    groups: [
+      { title: "Frontend", points: [
+        "Built the Depositor Portal in React, replacing email-and-spreadsheet submissions from labs worldwide.",
+        "Wrote 30 reusable React components: deposit form, bulk CSV upload, admin dashboard, pricing editor.",
+        "Built a 9-module admin platform (React, TypeScript, Ant Design, Recharts) for operations staff.",
+        "Built a rule-based audience builder with live counts across 57,229 customers.",
+        "Route guards in React that match the API's role-based access.",
+      ]},
+      { title: "Backend", points: [
+        "Designed 60 Node.js/Express REST endpoints on SQL Server.",
+        "Added real-time admin notifications with Socket.IO.",
+        "Shipped an AI shopping assistant over 4,684 products with LLM tool calling and model fallback.",
+        "Export engine turns approved deposits into NetSuite-ready catalog CSVs with SEO fields.",
+        "SuiteQL to Google Sheets to Looker Studio reporting pipeline for leadership.",
+      ]},
+      { title: "Performance", points: [
+        "Export engine runs at ~41,000 rows/second (1,000 products in 98 ms).",
+        "Lighthouse desktop performance 97, with a 1.2 s largest contentful paint.",
+        "Fixed a 12x revenue-reporting bug across 190,200 orders and $36.0M.",
+        "Planned cuts of 202 KiB unused JavaScript and ~519 KiB of images for mobile.",
+      ]},
+      { title: "Testing & Security", points: [
+        "50 Jest unit tests (82% coverage) and 22 Playwright end-to-end tests.",
+        "WCAG 2.1 accessibility scans with axe-core.",
+        "JWT, bcrypt, email OTP, role-based access and rate limiting on every endpoint.",
+        "Caught a breaking CORS change in sandbox and patched production before go-live.",
+      ]},
     ],
-    techStack: ["TypeScript", "React", "Redux Toolkit", "Node.js", "Express", "MySQL", "JWT & RBAC", "NetSuite", "Docker"],
+    techStack: ["React", "TypeScript", "Node.js", "Express", "SQL Server", "Socket.IO", "Jest", "Playwright", "NetSuite", "LLM APIs"],
   },
   {
-    yearRange: "Aug 2023 - Jan 2026",
-    role: "Application Developer",
-    company: "Optum Rx",
+    yearRange: "Aug 2023 – Jan 2026",
+    role: "Software Engineer, Healthcare Claims Platform",
+    company: "Optum, Inc.",
     location: "Remote",
-    description: [
-      "Developed full-stack healthcare applications with React, Node.js/Express, Java/Spring Boot, MongoDB, PostgreSQL and Redis, giving pharmacy fulfillment teams one view of inventory, dispatches, shipments and deliveries.",
-      "Built and maintained 15+ REST and GraphQL API endpoints with validation, authorization and consistent error handling.",
-      "Developed Spring Boot microservices with Spring Data JPA/Hibernate and Spring Security on PostgreSQL, using Apache Kafka for event-driven processing.",
-      "Built 3+ operational dashboards used by internal fulfillment staff, with Redux Toolkit, React Query, Tailwind CSS and Ant Design.",
-      "Added Redis caching and MongoDB compound indexes for fast, current dashboards, following HIPAA-focused data-handling practices.",
-      "Shipped through Docker, GitHub Actions CI/CD and AWS/Azure, and resolved ~10–15 production issues a week in a 25-person Agile team.",
+    groups: [
+      { title: "Frontend", points: [
+        "Built React/TypeScript screens for claim search, claim history and work queues.",
+        "Sped up large claim tables with list virtualization and memoization.",
+      ]},
+      { title: "Backend", points: [
+        "Built Java 17/Spring Boot microservices for EDI 837 claims processing.",
+        "Built claim status and history REST APIs with OpenAPI docs.",
+        "Validation rules for ICD-10, CPT/HCPCS and NPI codes.",
+        "Kafka producers and consumers with Avro schemas and backward-compatible changes.",
+      ]},
+      { title: "Performance", points: [
+        "Redis caching for eligibility and reference-data lookups.",
+        "Kafka retry topics and dead-letter handling to cut manual reprocessing.",
+        "Tuned Kafka consumers to reduce lag at peak intake.",
+        "Helped move a nightly batch claims workflow to event-driven processing.",
+      ]},
+      { title: "Testing, Security & Delivery", points: [
+        "JUnit 5 and Mockito unit and integration tests.",
+        "HIPAA data protection: log masking, encryption, audit logging, Key Vault secrets.",
+        "Docker and Azure Kubernetes Service through CI/CD; on-call with Splunk and Grafana.",
+        "Two-week Agile sprints, pull-request reviews and API docs in Confluence.",
+      ]},
     ],
-    techStack: ["React", "Redux Toolkit", "Node.js", "Spring Boot", "Kafka", "PostgreSQL", "MongoDB", "Redis", "AWS", "CI/CD"],
+    techStack: ["Java 17", "Spring Boot", "React", "TypeScript", "Kafka", "Redis", "Docker", "AKS", "Splunk"],
   },
   {
-    yearRange: "Aug 2021 - Nov 2022",
+    yearRange: "Aug 2021 – Nov 2022",
     role: "Associate Globalization Developer",
-    company: "TIBCO Software (now Cloud Software Group)",
+    company: "TIBCO Software Inc.",
     location: "Hyderabad, India",
-    description: [
-      "Developed Java/Spring Boot services for MOLEE, an internal translation-management platform supporting ~10 languages.",
-      "Designed REST APIs connecting the platform with build systems and external translation vendors, handling JSON/XML payloads, validation and job status.",
-      "Built Java components that validated XLIFF, .properties and JSON files before they reached product builds, and sped up processing by consolidating queries.",
-      "Deployed services with Docker on AWS (EC2, S3, CloudWatch) through CI/CD, wrote JUnit tests, and resolved ~10–15 localization defects a week with QA.",
+    groups: [
+      { title: "Backend", points: [
+        "Java/Spring Boot services and REST APIs for a translation platform across ~10 languages.",
+        "TIBCO EMS/JMS messaging with error queues and replay, so failed jobs recovered.",
+        "Configured webhooks and vendor connectors for the translation management system.",
+      ]},
+      { title: "Frontend & i18n", points: [
+        "AST scanners (JavaParser, ESLint) that catch hard-coded strings in Java and React.",
+        "Arabic right-to-left layouts and locale-aware date and number formats.",
+        "Code reviews for internationalization issues before translation.",
+      ]},
+      { title: "Performance & Quality", points: [
+        "Faster translation jobs with thread pools, JVM tuning and fewer JPA queries.",
+        "File validators for XLIFF, JSON and .properties; fixed ~10-15 defects a week.",
+        "Builds and deploys with Maven, Jenkins and Docker on AWS.",
+      ]},
     ],
-    techStack: ["Java", "Spring Boot", "Spring Data JPA", "REST APIs", "SQL", "AWS", "Docker", "JUnit", "Agile"],
+    techStack: ["Java", "Spring Boot", "Spring Data JPA", "Oracle", "TIBCO EMS/JMS", "Jenkins", "AWS"],
   },
 ];
 
 export const EDUCATION = [
   {
     id: 1,
-    degree: "B.Tech in Computer Science",
-    institution: "Gokaraju Rangaraju Institute of Engineering & Technology, Hyderabad, India",
-    duration: "2017 - 2021",
-    cgpa: 3.7,
-    courses: "COURSES: Linear Algebra, Advanced Calculus, Probability and statistics, DBMS, Advanced Data Structures, Operating Systems, Object oriented programming through Java, Web Technologies, Cloud Computing, Data warehousing and Data mining, Unified Modeling Language ", 
+    degree: "M.S. in Computer Science",
+    institution: "Saint Louis University, St. Louis, Missouri",
+    duration: "2023 – Dec 2024",
+    gpa: "GPA 3.86 / 4.0",
+    courses: "Artificial Intelligence, Distributed Computing, Software Architecture, Algorithms, Principles of Software Development, Data Analytics and IoT",
   },
   {
     id: 2,
-    degree: "M.S. in Computer Science",
-    institution: "Saint Louis University, St. Louis, Missouri",
-    duration: "2023 - 2024",
-    cgpa: 3.86,
-    courses:
-      "COURSES: Introduction to Artificial Intelligence, Data Analytics and Internet of Things, Principles of software Development, Distributed Computing, Software Architecture, Algorithms.",
+    degree: "B.Tech in Computer Science",
+    institution: "Gokaraju Rangaraju Institute of Engineering & Technology, Hyderabad",
+    duration: "2017 – Jul 2021",
+    gpa: "GPA 3.68 / 4.0 (9.2 / 10)",
+    courses: "Data Structures, DBMS, Operating Systems, OOP with Java, Web Technologies, Cloud Computing, Data Mining",
   },
 ];
 
+export const CERTIFICATIONS = [
+  "AI Application Development with Gemini & Claude (Udemy, 2026)",
+  "Advanced Design Patterns: Design Principles and SOLID (LinkedIn Learning, 2026)",
+  "Hacktoberfest 2026 Challenge Completion, DEV Community (Oct 2026)",
+];
+
+export const INTERNSHIPS = [
+  {
+    yearRange: "Feb 2023 – Aug 2023", role: "Software Developer", company: "Join Hands ESL", location: "USA",
+    groups: [
+      { title: "Website (WordPress)", points: [
+        "Handled website changes and content updates on the organization's WordPress site.",
+        "Customized the theme and page layouts with PHP, HTML, CSS and jQuery, using the WPBakery page builder.",
+        "Installed, configured and updated plugins (Contact Form 7, Revolution Slider, Essential Grid, reCAPTCHA).",
+        "Used WordPress hooks and filters in PHP to change how pages and forms behave without editing core files.",
+      ]},
+      { title: "Online admissions", points: [
+        "Replaced paper admission forms for new students (boys' and girls' programs) with an online form built on Contact Form 7.",
+        "Added field validation and Google reCAPTCHA spam protection.",
+        "Set up email notifications to staff and confirmation emails to applicants for every submitted form.",
+        "Mapped the paper admission steps with staff and turned them into a simpler online flow families finish in one go.",
+      ]},
+    ],
+    techStack: ["WordPress", "PHP", "Theme customization", "Plugins", "Hooks & filters", "Contact Form 7", "WPBakery", "jQuery", "HTML/CSS", "reCAPTCHA"],
+  },
+  {
+    yearRange: "Jan 2021 – Aug 2021", role: "Graduate Engineer Trainee", company: "NPCI", location: "India",
+    groups: [
+      { title: "Development", points: [
+        "Supported the development team on fintech and payments applications.",
+        "Built and fixed features with React and JavaScript on the front end and Java/Spring Boot services on the back end.",
+        "Worked with Kafka messaging during development and support.",
+      ]},
+      { title: "Bank support & automation", points: [
+        "Investigated transaction issues raised by partner banks with SQL queries on Linux servers, tracing what happened and why.",
+        "Wrote shell scripts that run the full set of transaction-lookup queries with one command, so every bank request was checked faster and the same way.",
+      ]},
+    ],
+    techStack: ["React", "JavaScript", "Java", "Spring Boot", "SQL", "Linux", "Shell scripting", "Kafka", "Fintech"],
+  },
+];
